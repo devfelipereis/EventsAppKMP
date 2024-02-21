@@ -28,7 +28,6 @@ kotlin {
     }
 
     sourceSets {
-
         androidMain.dependencies {
             implementation(libs.compose.ui.tooling.preview)
             implementation(libs.androidx.activity.compose)
@@ -51,6 +50,8 @@ kotlin {
             implementation(libs.voyager.navigator)
             implementation(libs.voyager.koin)
             implementation(libs.stately.common)
+            implementation(libs.coil.compose)
+            implementation(libs.coil.network.ktor)
         }
     }
 }
@@ -87,5 +88,10 @@ android {
     dependencies {
         debugImplementation(libs.compose.ui.tooling)
     }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.9"
+    }
+    buildFeatures {
+        compose = true
+    }
 }
-
