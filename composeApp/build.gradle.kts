@@ -50,6 +50,7 @@ kotlin {
             implementation(libs.ktor.serialization.kotlinx.json)
             implementation(libs.voyager.navigator)
             implementation(libs.voyager.koin)
+            implementation(libs.stately.common)
         }
     }
 }
