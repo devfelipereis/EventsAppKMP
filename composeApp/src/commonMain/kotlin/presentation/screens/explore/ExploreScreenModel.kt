@@ -1,4 +1,4 @@
-package screens.explore
+package presentation.screens.explore
 
 import cafe.adriel.voyager.core.model.ScreenModel
 import cafe.adriel.voyager.core.model.screenModelScope

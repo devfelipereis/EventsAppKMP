@@ -1,4 +1,4 @@
-package screens.explore
+package presentation.screens.explore
 
 import androidx.compose.animation.Crossfade
 import androidx.compose.material.Text

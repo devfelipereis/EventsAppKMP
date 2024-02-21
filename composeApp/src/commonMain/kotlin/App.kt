@@ -1,7 +1,7 @@
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import cafe.adriel.voyager.navigator.Navigator
-import screens.explore.ExploreScreen
+import presentation.screens.explore.ExploreScreen
 
 @Composable
 fun App() {

@@ -1,12 +1,12 @@
-package screens._di
+package presentation._di
 
 import org.koin.core.module.dsl.factoryOf
 import org.koin.dsl.module
-import screens.explore.ExploreScreenModel
+import presentation.screens.explore.ExploreScreenModel
 
 /**
  * Screens dependency injection module.
  */
-val screensModule = module {
+val presentationModule = module {
     factoryOf(::ExploreScreenModel)
 }

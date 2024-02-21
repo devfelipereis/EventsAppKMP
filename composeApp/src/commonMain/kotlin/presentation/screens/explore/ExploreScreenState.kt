@@ -1,4 +1,4 @@
-package screens.explore
+package presentation.screens.explore
 
 import domain.model.Event
 
