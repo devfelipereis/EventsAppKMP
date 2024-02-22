@@ -19,6 +19,7 @@ ktor = "2.3.8"
 statelyCommon = "2.0.6"
 voyager = "1.0.0"
 coil = "3.0.0-alpha04"
+composeIcons = "1.1.0"
 
 [libraries]
 coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil" }
@@ -44,6 +45,7 @@ ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx
 stately-common = { module = "co.touchlab:stately-common", version.ref = "statelyCommon" }
 voyager-navigator = { module = "cafe.adriel.voyager:voyager-navigator", version.ref = "voyager" }
 voyager-koin = { module = "cafe.adriel.voyager:voyager-koin", version.ref = "voyager" }
+composeIcons-feather = { module = "br.com.devsrsouza.compose.icons:feather", version.ref = "composeIcons" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
