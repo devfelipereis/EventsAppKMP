@@ -7,10 +7,10 @@ import kotlinx.coroutines.delay
 class FakeEventRemoteDataSource : EventRemoteDataSource {
     override suspend fun fetchAll(): List<Event> {
         delay(1_000)
-        return listOf<Event>(
+        return List(30) { index ->
             Event(
-                id = 1,
-                name = "test",
+                id = index,
+                name = "Event $index",
                 description = "test",
                 image = "test",
                 startDate = "test",
@@ -21,7 +21,7 @@ class FakeEventRemoteDataSource : EventRemoteDataSource {
                 latitude = 1.0,
                 longitude = 2.0
             )
-        )
+        }
     }
 
     override suspend fun search(): List<Event> = listOf()
