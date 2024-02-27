@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -26,78 +27,65 @@ import coil3.compose.AsyncImage
 @Composable
 fun PopularEventCard() {
     Box(
-        modifier = Modifier
-            .height(142.dp)
-            .fillMaxWidth()
-            .shadow(
-                elevation = 8.dp,
-                shape = RoundedCornerShape(size = 16.dp)
-            )
+        modifier = Modifier.height(142.dp).fillMaxWidth().shadow(
+            elevation = 8.dp, shape = RoundedCornerShape(size = 16.dp)
+        )
     ) {
         AsyncImage(
             model = "https://images.pexels.com/photos/787961/pexels-photo-787961.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             contentDescription = null,
-            contentScale = ContentScale.Crop
+            contentScale = ContentScale.Crop,
         )
 
-        Box(modifier = Modifier.padding(8.dp)) {
+        Box(modifier = Modifier.fillMaxSize().padding(8.dp)) {
             ParticipantsStack(showCount = false, size = 16.dp)
-        }
 
-        Box(
-            modifier = Modifier.fillMaxWidth()
-                .padding(8.dp)
-                .height(42.dp)
-                .clip(RoundedCornerShape(size = 8.dp))
-                .background(Color.White)
-                .padding(8.dp)
-                .align(Alignment.BottomCenter)
-        ) {
-
-            Column(
-                verticalArrangement = Arrangement.spacedBy(4.dp),
+            Box(
+                modifier = Modifier.fillMaxWidth().height(42.dp)
+                    .clip(RoundedCornerShape(size = 8.dp)).background(Color.White).padding(8.dp)
+                    .align(Alignment.BottomCenter)
             ) {
-                Row(
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    modifier = Modifier.fillMaxWidth()
+
+                Column(
+                    verticalArrangement = Arrangement.spacedBy(4.dp),
                 ) {
-                    Text(
-                        "Tribute to Didi Kempot",
-                        style = TextStyle(fontWeight = FontWeight.Bold, fontSize = 12.sp)
-                    )
-
-                    Text(
-                        "$20",
-                        style = TextStyle(
-                            fontSize = 12.sp,
-                            color = Color(0xFF5E71FF),
-                            fontWeight = FontWeight.Bold
+                    Row(
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Text(
+                            "Tribute to Didi Kempot",
+                            style = TextStyle(fontWeight = FontWeight.Bold, fontSize = 12.sp)
                         )
-                    )
+
+                        Text(
+                            "$20", style = TextStyle(
+                                fontSize = 12.sp,
+                                color = Color(0xFF5E71FF),
+                                fontWeight = FontWeight.Bold
+                            )
+                        )
+                    }
+
+                    Row(
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Text(
+                            "Denny Caknan", style = TextStyle(
+                                fontSize = 8.sp,
+                                color = Color(0xFF787878),
+                            )
+                        )
+
+                        Text(
+                            "November 7 2022", style = TextStyle(
+                                fontSize = 8.sp,
+                                color = Color(0xFF787878),
+                            )
+                        )
+                    }
                 }
-
-                Row(
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    modifier = Modifier.fillMaxWidth()
-                ) {
-                    Text(
-                        "Denny Caknan",
-                        style = TextStyle(
-                            fontSize = 8.sp,
-                            color = Color(0xFF787878),
-                        )
-                    )
-
-                    Text(
-                        "November 7 2022",
-                        style = TextStyle(
-                            fontSize = 8.sp,
-                            color = Color(0xFF787878),
-                        )
-                    )
-                }
-
-
             }
         }
     }
