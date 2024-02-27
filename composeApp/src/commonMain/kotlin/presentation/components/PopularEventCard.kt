@@ -31,8 +31,7 @@ fun PopularEventCard() {
             .fillMaxWidth()
             .shadow(
                 elevation = 8.dp,
-                shape = RoundedCornerShape(size = 16.dp),
-                clip = true
+                shape = RoundedCornerShape(size = 16.dp)
             )
     ) {
         AsyncImage(
